@@ -1,0 +1,126 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+
+    group = 'org.luger'
+    version = '1.0-SNAPSHOT'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-web')
+        compileOnly('org.projectlombok:lombok')
+//        runtime('com.h2database:h2')
+        runtime('org.postgresql:postgresql')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}
+
+subprojects {
+
+}
+
+project(':jdbc') {
+
+    jar {
+        baseName = 'jdbc'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-jdbc')
+    }
+}
+
+project(':jooq') {
+
+    jar {
+        baseName = 'jooq'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-jooq')
+    }
+}
+
+project(':mybatis') {
+
+    jar {
+        baseName = 'mybatis'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+        compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.2.0')
+    }
+}
+
+project(':jpa') {
+
+    jar {
+        baseName = 'jpa'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+
+    }
+}
+
+project(':hibernate') {
+
+    jar {
+        baseName = 'hibernate'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+
+    }
+}
+
+project(':spring-hibernate') {
+
+    jar {
+        baseName = 'spring-hibernate'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+
+    }
+}
+
+project(':spring-data-jpa') {
+
+    jar {
+        baseName = 'spring-data-jpa'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-data-jpa')
+        compile('org.springframework.boot:spring-boot-starter-data-rest')
+    }
+}
