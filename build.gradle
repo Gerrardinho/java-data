@@ -39,6 +39,9 @@ allprojects {
         compile("com.fasterxml.jackson.module:jackson-module-kotlin")
         // Spring
         compile('org.springframework.boot:spring-boot-starter-web')
+        compile('org.springframework.data:spring-data-rest-hal-browser')
+        runtime('org.springframework.boot:spring-boot-devtools')
+        testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
         testCompile('org.springframework.boot:spring-boot-starter-test')
         // Driver
         runtime('org.postgresql:postgresql')
