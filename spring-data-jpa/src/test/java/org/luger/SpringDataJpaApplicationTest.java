@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Created by gerardo8 on 25/02/2017.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SpringDataJpaApplicationTest {
 
     @Test
