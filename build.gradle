@@ -89,7 +89,7 @@ project(':mybatis') {
     }
 }
 
-project(':jpa') {
+project(':hibernate-jpa') {
 
     jar {
         baseName = 'jpa'
