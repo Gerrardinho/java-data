@@ -92,7 +92,7 @@ project(':mybatis') {
 project(':hibernate-jpa') {
 
     jar {
-        baseName = 'jpa'
+        baseName = 'hibernate-jpa'
         version = '1.0-SNAPSHOT'
     }
 
