@@ -125,6 +125,18 @@ project(':spring-hibernate') {
     }
 }
 
+project(':spring-hibernate-jpa') {
+
+    jar {
+        baseName = 'spring-hibernate-jpa'
+        version = '1.0-SNAPSHOT'
+    }
+
+    dependencies {
+
+    }
+}
+
 project(':spring-data-jpa') {
 
     jar {
