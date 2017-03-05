@@ -1,7 +1,7 @@
 buildscript {
     ext {
         kotlinVersion = "1.1.0"
-        springBootVersion = '1.5.1.RELEASE'
+        springBootVersion = '1.5.2.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -121,7 +121,8 @@ project(':spring-hibernate') {
     }
 
     dependencies {
-
+        compile("org.hibernate:hibernate-core:5.2.8.Final")
+        compile("org.springframework:spring-orm")
     }
 }
 
@@ -133,7 +134,8 @@ project(':spring-hibernate-jpa') {
     }
 
     dependencies {
-
+        compile("org.hibernate:hibernate-core:5.2.8.Final")
+        compile("org.springframework:spring-orm")
     }
 }
 
